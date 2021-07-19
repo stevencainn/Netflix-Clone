@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from './axios';
 import requests from './requests'
+import './Banner.css'
 
 
 function Banner() {
@@ -16,6 +17,10 @@ function Banner() {
         fetchData()
     }, [])
 
+    function truncate(str, n){
+        return str?.length > n ? str.substr(0, n -1) + "..." : str;
+    }
+
     console.log(movie);
 
 
@@ -28,16 +33,16 @@ function Banner() {
             backgroundPosition: "center center",
         }}>
             <div className="banner__contents">
-                <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+                <h1 className='banner__title'>{movie?.title || movie?.name || movie?.original_name}</h1>
 
-            </div>
-        
-            {/*title */}
+                <div className="banner__buttons">
+                    <button className="banner__button">Play</button>
+                    <button className="banner__button">My List</button>
+                </div>
 
-            {/*div with 2 bittons */}
-
-            {/*desciption */}
-
+                <h1 className="banner__description"> {truncate(movie?.overview, 150)}</h1>
+            </div>  
+            <div className="banner--fadeBottom"></div>
         </header>
     )
 }
