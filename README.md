@@ -6,14 +6,14 @@ This project is a dynamic and responsive Front end clone of Netflix. It was crea
 Feel free to contribute!
 
 Technologies Used
-Axios
-React
-Node
-Movie-Trailer
-React-Youtube
-HTML/CSS
-Javascript
-TMDB API
+*Axios
+*React
+*Node
+*Movie-Trailer
+*React-Youtube
+*HTML/CSS
+*Javascript
+*TMDB API
 
 
 Runing Project Locally
